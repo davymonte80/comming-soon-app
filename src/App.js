@@ -1,9 +1,9 @@
 // src/App.js
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'; // Update the import statement
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 import Services from './Services';
 import './App.css';
@@ -30,8 +30,16 @@ const Home = () => (
       <Link to="/">Home</Link>
       <Link to="/services">Services</Link>
     </nav>
+  </div>
+);
 
-    <Routes> {/* Replace Switch with Routes */}
+const App = () => (
+  <Router>
+    <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/services" element={<Services />} />
- 
+    </Routes>
+  </Router>
+);
+
+export default App;
