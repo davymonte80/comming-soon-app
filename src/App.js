@@ -3,6 +3,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'; // Updated import for faEnvelope
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 import Services from './Services';
@@ -23,6 +24,9 @@ const Home = () => (
       </a>
       <a href="https://www.linkedin.com/in/david-monte-a2a513197/" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faLinkedin} />
+      </a>
+      <a href="mailto:davymonte80@gmail.com" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faEnvelope} />
       </a>
     </div>
 
